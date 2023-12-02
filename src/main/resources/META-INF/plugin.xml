@@ -5,14 +5,33 @@
     <vendor>oleludwig</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.ultimate</depends>
+    <depends>org.jetbrains.plugins.textmate</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.oleludwig.saplintellijplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.oleludwig.saplintellijplugin.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow"/>
+        <platform.lsp.serverSupportProvider
+                implementation="com.github.oleludwig.saplintellijplugin.lsp.SaplLspServerSupportProvider"/>
+        <postStartupActivity implementation="com.github.oleludwig.saplintellijplugin.TextmateActivator" />
+        <fileType
+                name="SAPL"
+                implementationClass="com.github.oleludwig.saplintellijplugin.SaplFileType"
+                fieldName="INSTANCE"
+                language="SAPL"
+                extensions="sapl"/>
+        <editorHighlighterProvider
+                filetype="SAPL"
+                implementationClass="org.jetbrains.plugins.textmate.language.syntax.highlighting.TextMateEditorHighlighterProvider"/>
+        <lang.syntaxHighlighterFactory
+                language="SAPL"
+                implementationClass="org.jetbrains.plugins.textmate.language.syntax.highlighting.TextMateSyntaxHighlighterFactory"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.oleludwig.saplintellijplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.oleludwig.saplintellijplugin.listeners.MyApplicationActivationListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
