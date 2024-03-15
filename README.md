@@ -8,7 +8,7 @@
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
 - [ ] Get familiar with the [template documentation][template].
 - [X] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
+- [X] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
 - [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
 - [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
 - [ ] Set the `PLUGIN_ID` in the above README badges.
@@ -17,11 +17,18 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+# Streaming Attribute Policy Language (SAPL)
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+This plug-in supplies code lsp support and syntax highleighting for the Streaming Attribute Policy Language.
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+The Streaming Attribute Policy Language (SAPL) offers a compact, easy-to-read, and easy-to-write syntax to express your
+access-control policies. Policies written in SAPL require little code and do not obfuscate the meaning of the policy in
+extensive structural boilerplate code, as found in the Xtensible Access Control Markup Language (XACML).
+
+SAPL supports a JSON oriented data model including rich JSON path-like querying of JSON objects.
+
+SAPL supports both traditional request-response-based policy decision making as well as publish-subscribe attribute
+stream driven decision making based on an reactive API.
 <!-- Plugin description end -->
 
 ## Installation
