@@ -1,6 +1,6 @@
-package com.github.oleludwig.saplintellijplugin.lsp
+package io.sapl.intellij.lsp
 
-import com.github.oleludwig.saplintellijplugin.SaplFileType
+import io.sapl.intellij.SaplFileType
 import com.intellij.execution.configurations.GeneralCommandLine
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile

@@ -1,22 +1,22 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.oleludwig.saplintellijplugin</id>
-    <name>sapl-intellij-plugin Template</name>
-    <vendor>oleludwig</vendor>
+    <id>io.sapl.saplintellijplugin</id>
+    <name>SAPL</name>
+    <vendor>Dominic Heutelbeck</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.ultimate</depends>
     <depends>org.jetbrains.plugins.textmate</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.sapl</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <platform.lsp.serverSupportProvider
-                implementation="com.github.oleludwig.saplintellijplugin.lsp.SaplLspServerSupportProvider"/>
-        <postStartupActivity implementation="com.github.oleludwig.saplintellijplugin.TextmateActivator" />
+                implementation="io.sapl.intellij.lsp.SaplLspServerSupportProvider"/>
+        <postStartupActivity implementation="io.sapl.intellij.TextmateActivator" />
         <fileType
                 name="SAPL"
-                implementationClass="com.github.oleludwig.saplintellijplugin.SaplFileType"
+                implementationClass="io.sapl.intellij.SaplFileType"
                 fieldName="INSTANCE"
                 language="SAPL"
                 extensions="sapl"/>

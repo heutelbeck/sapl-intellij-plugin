@@ -1,4 +1,4 @@
-package com.github.oleludwig.saplintellijplugin
+package io.sapl.intellij
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity

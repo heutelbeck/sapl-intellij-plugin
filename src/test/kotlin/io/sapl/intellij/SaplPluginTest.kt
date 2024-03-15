@@ -1,4 +1,4 @@
-package com.github.oleludwig.saplintellijplugin
+package io.sapl.intellij
 
 import com.intellij.testFramework.TestDataPath
 import com.intellij.testFramework.fixtures.BasePlatformTestCase
