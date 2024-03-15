@@ -6,7 +6,7 @@ import javax.swing.Icon
 object SaplFileType : LanguageFileType(SaplLanguage) {
     override fun getName(): String = "SAPL"
 
-    override fun getDescription(): String = "TODO"
+    override fun getDescription(): String = "SAPL policy file"
 
     override fun getDefaultExtension(): String = "sapl"
 
