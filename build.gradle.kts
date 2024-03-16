@@ -139,4 +139,10 @@ tasks {
             into("${intellij.pluginName.get()}/lib/textmate")
         }
     }
+
+    prepareTestingSandbox {
+        from("lib/textmate-sapl") {
+            into("${intellij.pluginName.get()}/lib/textmate")
+        }
+    }
 }
