@@ -1,6 +1,7 @@
 [versions]
 # libraries
 annotations = "24.1.0"
+sapl = "3.0.0-SNAPSHOT"
 
 # plugins
 kotlin = "1.9.23"
@@ -11,6 +12,7 @@ kover = "0.7.6"
 
 [libraries]
 annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+saplLanguageServer = { group = "io.sapl", name = "sapl-language-server", version.ref = "sapl"}
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
