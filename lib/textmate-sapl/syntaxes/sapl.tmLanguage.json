@@ -1,0 +1,129 @@
+{
+    "name": "sapl",
+    "scopeName": "source.sapl",
+    "fileTypes": [
+        "sapl"
+    ],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#constants-and-variables"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#parameters"
+        },
+        {
+            "include": "#punctuation"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "include": "#linecomment"
+                },
+                {
+                    "include": "#blockcomment"
+                },
+                {
+                    "include": "#string"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(import|set|policy|deny|permit|where|obligation|advice|transform)\\b",
+                    "name": "keyword.control.sapl"
+                }
+            ]
+        },
+        "constants-and-variables": {
+            "patterns": [
+                {
+                    "match": "\\b(deny-overrides|permit-overrides|first-applicable|only-one-applicable|deny-unless-permit|permit-unless-deny)\\b",
+                    "name": "constant.language.sapl"
+                },
+                {
+                    "match": "\\b(subject|action|resource|environment)\\b",
+                    "name": "variable.language.sapl"
+                },
+                {
+                    "match": "\\b(undefined|true|null|false|each|for)\\b",
+                    "name": "variable.language.sapl"
+                },
+                {
+                    "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)([LlFfUuDd]|UL|ul)?\\b",
+                    "name": "constant.numeric.sapl"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "match": "\\b(in|as)\\b",
+                    "name": "keyword.operator.sapl"
+                },
+                {
+                    "match": "(==|!=|<=|>=|<>|<|>)",
+                    "name": "keyword.operator.comparison.sapl"
+                },
+                {
+                    "match": "(=)",
+                    "name": "keyword.operator.assignment.sapl"
+                },
+                {
+                    "match": "(\\-\\-|\\+\\+)",
+                    "name": "keyword.operator.increment-decrement.sapl"
+                },
+                {
+                    "match": "(\\-|\\+|\\*|\\/|%)",
+                    "name": "keyword.operator.arithmetic.sapl"
+                },
+                {
+                    "match": "(&&|\\|\\|)",
+                    "name": "keyword.operator.logical.sapl"
+                }
+            ]
+        },
+        "parameters": {
+            "patterns": [
+                {
+                    "match": "\\b(var)\\b",
+                    "name": "storage.modifier.sapl"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "match": ";",
+                    "name": "punctuation.terminator.sapl"
+                }
+            ]
+        },
+        "linecomment": {
+            "begin": "(^[ \\t]+)?(?=//)",
+            "end": "(?=$)",
+            "name": "comment.line.double-dash.sapl"
+        },
+        "blockcomment": {
+            "begin": "/\\*(\\*)?(?!/)",
+            "end": "\\*/",
+            "name": "comment.block.sapl"
+        },
+        "string": {
+			"begin": "\"",
+			"end": "\"",
+            "name": "string.quoted.double.sapl"
+		}
+    }
+}

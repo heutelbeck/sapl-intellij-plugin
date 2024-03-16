@@ -1,0 +1,28 @@
+{
+    "name": "sapl-textmate-bundle",
+    "activationEvents": [
+        "onLanguage:sapl"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "sapl",
+                "aliases": [
+                    "streaming attribute policy language",
+                    "sapl"
+                ],
+                "extensions": [
+                    ".sapl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sapl",
+                "scopeName": "source.sapl",
+                "path": "./syntaxes/sapl.tmLanguage.json"
+            }
+        ]
+    }
+}
