@@ -6,7 +6,7 @@
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
+- [X] Get familiar with the [template documentation][template].
 - [X] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
 - [X] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
 - [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
@@ -35,7 +35,7 @@ stream driven decision making based on an reactive API.
 
 - Using the IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "sapl-intellij-plugin"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "SAPL"</kbd> >
   <kbd>Install</kbd>
   
 - Manually:
@@ -43,6 +43,13 @@ stream driven decision making based on an reactive API.
   Download the [latest release](https://github.com/heutelbeck/sapl-intellij-plugin/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
+## Development
+
+- Run tests: `./gradlew check`
+- Run IDE with the sapl plugin: `./gradlew runIDE`
+- Build plugin: `./gradlew buildPlugin`
+
+The build of the plugin generates a [zip](build/distributions/sapl-intellij-plugin-3.0.0-SNAPSHOT.zip) which can be installed as a plugin in IntelliJ.
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
